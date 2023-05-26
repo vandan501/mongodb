@@ -1,0 +1,277 @@
+Microsoft Windows [Version 10.0.19045.2965]
+(c) Microsoft Corporation. All rights reserved.
+
+C:\Users\Vandan Raval>mongod
+'mongod' is not recognized as an internal or external command,
+operable program or batch file.
+
+C:\Users\Vandan Raval>mongosh
+Current Mongosh Log ID: 6470a48d2c8f8acc1022d055
+Connecting to:          mongodb://127.0.0.1:27017/?directConnection=true&serverSelectionTimeoutMS=2000&appName=mongosh+1.9.1
+Using MongoDB:          6.0.6
+Using Mongosh:          1.9.1
+
+For mongosh info see: https://docs.mongodb.com/mongodb-shell/
+
+------
+   The server generated these startup warnings when booting
+   2023-05-26T17:01:09.084+05:30: Access control is not enabled for the database. Read and write access to data and configuration is unrestricted
+------
+
+test> show dbs;
+admin    40.00 KiB
+config  108.00 KiB
+local    72.00 KiB
+test> show databases
+admin    40.00 KiB
+config  108.00 KiB
+local    72.00 KiB
+test> use admin
+switched to db admin
+admin> use local;
+switched to db local
+local> show collections;
+startup_log
+local> db.startup_log.find();
+[
+  {
+    _id: 'VandanRaaval-2002-1685100544631',
+    hostname: 'VandanRaaval-2002',
+    startTime: ISODate("2023-05-26T11:29:04.000Z"),
+    startTimeLocal: 'Fri May 26 16:59:04.632',
+    cmdLine: {
+      config: 'C:\\Program Files\\MongoDB\\Server\\6.0\\bin\\mongod.cfg',
+      net: { bindIp: '127.0.0.1', port: 27017 },
+      service: true,
+      storage: {
+        dbPath: 'C:\\Program Files\\MongoDB\\Server\\6.0\\data',
+        journal: { enabled: true }
+      },
+      systemLog: {
+        destination: 'file',
+        logAppend: true,
+        path: 'C:\\Program Files\\MongoDB\\Server\\6.0\\log\\mongod.log'
+      }
+    },
+    pid: Long("14476"),
+    buildinfo: {
+      version: '6.0.6',
+      gitVersion: '26b4851a412cc8b9b4a18cdb6cd0f9f642e06aa7',
+      targetMinOS: 'Windows 7/Windows Server 2008 R2',
+      modules: [],
+      allocator: 'tcmalloc',
+      javascriptEngine: 'mozjs',
+      sysInfo: 'deprecated',
+      versionArray: [ 6, 0, 6, 0 ],
+      openssl: { running: 'Windows SChannel' },
+      buildEnvironment: {
+        distmod: 'windows',
+        distarch: 'x86_64',
+        cc: 'cl: Microsoft (R) C/C++ Optimizing Compiler Version 19.31.31107 for x64',
+        ccflags: '/nologo /WX /FImongo/platform/basic.h /fp:strict /EHsc /W3 /wd4068 /wd4244 /wd4267 /wd4290 /wd4351 /wd4355 /wd4373 /wd4800 /wd4251 /wd4291 /we4013 /we4099 /we4930 /errorReport:none /MD /O2 /Oy- /bigobj /utf-8 /permissive- /Zc:__cplusplus /Zc:sizedDealloc /volatile:iso /diagnostics:caret /std:c++17 /Gw /Gy /Zc:inline',
+        cxx: 'cl: Microsoft (R) C/C++ Optimizing Compiler Version 19.31.31107 for x64',
+        cxxflags: '/TP',
+        linkflags: '/nologo /DEBUG /INCREMENTAL:NO /LARGEADDRESSAWARE /OPT:REF',
+        target_arch: 'x86_64',
+        target_os: 'windows',
+        cppdefines: 'SAFEINT_USE_INTRINSICS 0 PCRE_STATIC NDEBUG BOOST_ALL_NO_LIB _UNICODE UNICODE _SILENCE_CXX17_ALLOCATOR_VOID_DEPRECATION_WARNING _SILENCE_CXX17_OLD_ALLOCATOR_MEMBERS_DEPRECATION_WARNING _SILENCE_CXX17_CODECVT_HEADER_DEPRECATION_WARNING _SILENCE_ALL_CXX20_DEPRECATION_WARNINGS _CONSOLE _CRT_SECURE_NO_WARNINGS _ENABLE_EXTENDED_ALIGNED_STORAGE _SCL_SECURE_NO_WARNINGS _WIN32_WINNT 0x0A00 BOOST_USE_WINAPI_VERSION 0x0A00 NTDDI_VERSION 0x0A000000 BOOST_THREAD_VERSION 5 BOOST_THREAD_USES_DATETIME BOOST_SYSTEM_NO_DEPRECATED BOOST_MATH_NO_LONG_DOUBLE_MATH_FUNCTIONS BOOST_ENABLE_ASSERT_DEBUG_HANDLER BOOST_LOG_NO_SHORTHAND_NAMES BOOST_LOG_USE_NATIVE_SYSLOG BOOST_LOG_WITHOUT_THREAD_ATTR ABSL_FORCE_ALIGNED_ACCESS'
+      },
+      bits: 64,
+      debug: false,
+      maxBsonObjectSize: 16777216,
+      storageEngines: [ 'devnull', 'ephemeralForTest', 'wiredTiger' ]
+    }
+  },
+  {
+    _id: 'VandanRaaval-2002-1685100672080',
+    hostname: 'VandanRaaval-2002',
+    startTime: ISODate("2023-05-26T11:31:12.000Z"),
+    startTimeLocal: 'Fri May 26 17:01:12.080',
+    cmdLine: {
+      config: 'C:\\Program Files\\MongoDB\\Server\\6.0\\bin\\mongod.cfg',
+      net: { bindIp: '127.0.0.1', port: 27017 },
+      service: true,
+      storage: {
+        dbPath: 'C:\\Program Files\\MongoDB\\Server\\6.0\\data',
+        journal: { enabled: true }
+      },
+      systemLog: {
+        destination: 'file',
+        logAppend: true,
+        path: 'C:\\Program Files\\MongoDB\\Server\\6.0\\log\\mongod.log'
+      }
+    },
+    pid: Long("4336"),
+    buildinfo: {
+      version: '6.0.6',
+      gitVersion: '26b4851a412cc8b9b4a18cdb6cd0f9f642e06aa7',
+      targetMinOS: 'Windows 7/Windows Server 2008 R2',
+      modules: [],
+      allocator: 'tcmalloc',
+      javascriptEngine: 'mozjs',
+      sysInfo: 'deprecated',
+      versionArray: [ 6, 0, 6, 0 ],
+      openssl: { running: 'Windows SChannel' },
+      buildEnvironment: {
+        distmod: 'windows',
+        distarch: 'x86_64',
+        cc: 'cl: Microsoft (R) C/C++ Optimizing Compiler Version 19.31.31107 for x64',
+        ccflags: '/nologo /WX /FImongo/platform/basic.h /fp:strict /EHsc /W3 /wd4068 /wd4244 /wd4267 /wd4290 /wd4351 /wd4355 /wd4373 /wd4800 /wd4251 /wd4291 /we4013 /we4099 /we4930 /errorReport:none /MD /O2 /Oy- /bigobj /utf-8 /permissive- /Zc:__cplusplus /Zc:sizedDealloc /volatile:iso /diagnostics:caret /std:c++17 /Gw /Gy /Zc:inline',
+        cxx: 'cl: Microsoft (R) C/C++ Optimizing Compiler Version 19.31.31107 for x64',
+        cxxflags: '/TP',
+        linkflags: '/nologo /DEBUG /INCREMENTAL:NO /LARGEADDRESSAWARE /OPT:REF',
+        target_arch: 'x86_64',
+        target_os: 'windows',
+        cppdefines: 'SAFEINT_USE_INTRINSICS 0 PCRE_STATIC NDEBUG BOOST_ALL_NO_LIB _UNICODE UNICODE _SILENCE_CXX17_ALLOCATOR_VOID_DEPRECATION_WARNING _SILENCE_CXX17_OLD_ALLOCATOR_MEMBERS_DEPRECATION_WARNING _SILENCE_CXX17_CODECVT_HEADER_DEPRECATION_WARNING _SILENCE_ALL_CXX20_DEPRECATION_WARNINGS _CONSOLE _CRT_SECURE_NO_WARNINGS _ENABLE_EXTENDED_ALIGNED_STORAGE _SCL_SECURE_NO_WARNINGS _WIN32_WINNT 0x0A00 BOOST_USE_WINAPI_VERSION 0x0A00 NTDDI_VERSION 0x0A000000 BOOST_THREAD_VERSION 5 BOOST_THREAD_USES_DATETIME BOOST_SYSTEM_NO_DEPRECATED BOOST_MATH_NO_LONG_DOUBLE_MATH_FUNCTIONS BOOST_ENABLE_ASSERT_DEBUG_HANDLER BOOST_LOG_NO_SHORTHAND_NAMES BOOST_LOG_USE_NATIVE_SYSLOG BOOST_LOG_WITHOUT_THREAD_ATTR ABSL_FORCE_ALIGNED_ACCESS'
+      },
+      bits: 64,
+      debug: false,
+      maxBsonObjectSize: 16777216,
+      storageEngines: [ 'devnull', 'ephemeralForTest', 'wiredTiger' ]
+    }
+  }
+]
+local> show dbs;
+admin    40.00 KiBl
+config  108.00 KiB
+local    72.00 KiB
+local> use First_demo;
+switched to db First_demo
+First_demo> show dbs
+admin    40.00 KiB
+config  108.00 KiB
+local    72.00 KiB
+First_demo> db.local.find()
+
+First_demo> use local
+switched to db local
+local> show collections
+startup_log
+local> db.startup_log.find()
+[
+  {
+    _id: 'VandanRaaval-2002-1685100544631',
+    hostname: 'VandanRaaval-2002',
+    startTime: ISODate("2023-05-26T11:29:04.000Z"),
+    startTimeLocal: 'Fri May 26 16:59:04.632',
+    cmdLine: {
+      config: 'C:\\Program Files\\MongoDB\\Server\\6.0\\bin\\mongod.cfg',
+      net: { bindIp: '127.0.0.1', port: 27017 },
+      service: true,
+      storage: {
+        dbPath: 'C:\\Program Files\\MongoDB\\Server\\6.0\\data',
+        journal: { enabled: true }
+      },
+      systemLog: {
+        destination: 'file',
+        logAppend: true,
+        path: 'C:\\Program Files\\MongoDB\\Server\\6.0\\log\\mongod.log'
+      }
+    },
+    pid: Long("14476"),
+    buildinfo: {
+      version: '6.0.6',
+      gitVersion: '26b4851a412cc8b9b4a18cdb6cd0f9f642e06aa7',
+      targetMinOS: 'Windows 7/Windows Server 2008 R2',
+      modules: [],
+      allocator: 'tcmalloc',
+      javascriptEngine: 'mozjs',
+      sysInfo: 'deprecated',
+      versionArray: [ 6, 0, 6, 0 ],
+      openssl: { running: 'Windows SChannel' },
+      buildEnvironment: {
+        distmod: 'windows',
+        distarch: 'x86_64',
+        cc: 'cl: Microsoft (R) C/C++ Optimizing Compiler Version 19.31.31107 for x64',
+        ccflags: '/nologo /WX /FImongo/platform/basic.h /fp:strict /EHsc /W3 /wd4068 /wd4244 /wd4267 /wd4290 /wd4351 /wd4355 /wd4373 /wd4800 /wd4251 /wd4291 /we4013 /we4099 /we4930 /errorReport:none /MD /O2 /Oy- /bigobj /utf-8 /permissive- /Zc:__cplusplus /Zc:sizedDealloc /volatile:iso /diagnostics:caret /std:c++17 /Gw /Gy /Zc:inline',
+        cxx: 'cl: Microsoft (R) C/C++ Optimizing Compiler Version 19.31.31107 for x64',
+        cxxflags: '/TP',
+        linkflags: '/nologo /DEBUG /INCREMENTAL:NO /LARGEADDRESSAWARE /OPT:REF',
+        target_arch: 'x86_64',
+        target_os: 'windows',
+        cppdefines: 'SAFEINT_USE_INTRINSICS 0 PCRE_STATIC NDEBUG BOOST_ALL_NO_LIB _UNICODE UNICODE _SILENCE_CXX17_ALLOCATOR_VOID_DEPRECATION_WARNING _SILENCE_CXX17_OLD_ALLOCATOR_MEMBERS_DEPRECATION_WARNING _SILENCE_CXX17_CODECVT_HEADER_DEPRECATION_WARNING _SILENCE_ALL_CXX20_DEPRECATION_WARNINGS _CONSOLE _CRT_SECURE_NO_WARNINGS _ENABLE_EXTENDED_ALIGNED_STORAGE _SCL_SECURE_NO_WARNINGS _WIN32_WINNT 0x0A00 BOOST_USE_WINAPI_VERSION 0x0A00 NTDDI_VERSION 0x0A000000 BOOST_THREAD_VERSION 5 BOOST_THREAD_USES_DATETIME BOOST_SYSTEM_NO_DEPRECATED BOOST_MATH_NO_LONG_DOUBLE_MATH_FUNCTIONS BOOST_ENABLE_ASSERT_DEBUG_HANDLER BOOST_LOG_NO_SHORTHAND_NAMES BOOST_LOG_USE_NATIVE_SYSLOG BOOST_LOG_WITHOUT_THREAD_ATTR ABSL_FORCE_ALIGNED_ACCESS'
+      },
+      bits: 64,
+      debug: false,
+      maxBsonObjectSize: 16777216,
+      storageEngines: [ 'devnull', 'ephemeralForTest', 'wiredTiger' ]
+    }
+  },
+  {
+    _id: 'VandanRaaval-2002-1685100672080',
+    hostname: 'VandanRaaval-2002',
+    startTime: ISODate("2023-05-26T11:31:12.000Z"),
+    startTimeLocal: 'Fri May 26 17:01:12.080',
+    cmdLine: {
+      config: 'C:\\Program Files\\MongoDB\\Server\\6.0\\bin\\mongod.cfg',
+      net: { bindIp: '127.0.0.1', port: 27017 },
+      service: true,
+      storage: {
+        dbPath: 'C:\\Program Files\\MongoDB\\Server\\6.0\\data',
+        journal: { enabled: true }
+      },
+      systemLog: {
+        destination: 'file',
+        logAppend: true,
+        path: 'C:\\Program Files\\MongoDB\\Server\\6.0\\log\\mongod.log'
+      }
+    },
+    pid: Long("4336"),
+    buildinfo: {
+      version: '6.0.6',
+      gitVersion: '26b4851a412cc8b9b4a18cdb6cd0f9f642e06aa7',
+      targetMinOS: 'Windows 7/Windows Server 2008 R2',
+      modules: [],
+      allocator: 'tcmalloc',
+      javascriptEngine: 'mozjs',
+      sysInfo: 'deprecated',
+      versionArray: [ 6, 0, 6, 0 ],
+      openssl: { running: 'Windows SChannel' },
+      buildEnvironment: {
+        distmod: 'windows',
+        distarch: 'x86_64',
+        cc: 'cl: Microsoft (R) C/C++ Optimizing Compiler Version 19.31.31107 for x64',
+        ccflags: '/nologo /WX /FImongo/platform/basic.h /fp:strict /EHsc /W3 /wd4068 /wd4244 /wd4267 /wd4290 /wd4351 /wd4355 /wd4373 /wd4800 /wd4251 /wd4291 /we4013 /we4099 /we4930 /errorReport:none /MD /O2 /Oy- /bigobj /utf-8 /permissive- /Zc:__cplusplus /Zc:sizedDealloc /volatile:iso /diagnostics:caret /std:c++17 /Gw /Gy /Zc:inline',
+        cxx: 'cl: Microsoft (R) C/C++ Optimizing Compiler Version 19.31.31107 for x64',
+        cxxflags: '/TP',
+        linkflags: '/nologo /DEBUG /INCREMENTAL:NO /LARGEADDRESSAWARE /OPT:REF',
+        target_arch: 'x86_64',
+        target_os: 'windows',
+        cppdefines: 'SAFEINT_USE_INTRINSICS 0 PCRE_STATIC NDEBUG BOOST_ALL_NO_LIB _UNICODE UNICODE _SILENCE_CXX17_ALLOCATOR_VOID_DEPRECATION_WARNING _SILENCE_CXX17_OLD_ALLOCATOR_MEMBERS_DEPRECATION_WARNING _SILENCE_CXX17_CODECVT_HEADER_DEPRECATION_WARNING _SILENCE_ALL_CXX20_DEPRECATION_WARNINGS _CONSOLE _CRT_SECURE_NO_WARNINGS _ENABLE_EXTENDED_ALIGNED_STORAGE _SCL_SECURE_NO_WARNINGS _WIN32_WINNT 0x0A00 BOOST_USE_WINAPI_VERSION 0x0A00 NTDDI_VERSION 0x0A000000 BOOST_THREAD_VERSION 5 BOOST_THREAD_USES_DATETIME BOOST_SYSTEM_NO_DEPRECATED BOOST_MATH_NO_LONG_DOUBLE_MATH_FUNCTIONS BOOST_ENABLE_ASSERT_DEBUG_HANDLER BOOST_LOG_NO_SHORTHAND_NAMES BOOST_LOG_USE_NATIVE_SYSLOG BOOST_LOG_WITHOUT_THREAD_ATTR ABSL_FORCE_ALIGNED_ACCESS'
+      },
+      bits: 64,
+      debug: false,
+      maxBsonObjectSize: 16777216,
+      storageEngines: [ 'devnull', 'ephemeralForTest', 'wiredTiger' ]
+    }
+  }
+]
+local> use First_demo
+switched to db First_demo
+First_demo> show dbs
+admin    40.00 KiB
+config  108.00 KiB
+local    72.00 KiB
+First_demo> db.createCollection("userDetails")
+{ ok: 1 }
+First_demo> show dbs
+First_demo    8.00 KiB
+admin        40.00 KiB
+config      108.00 KiB
+local        72.00 KiB
+First_demo> db.userDetails.insertOne({name:"vandan Raval",age:21,DOB:"04-08-2002",education:"persuing BE in computer Engineering"});
+{
+  acknowledged: true,
+  insertedId: ObjectId("6470bd4c2c8f8acc1022d056")
+}
+First_demo> db.userDetails.find()
+[
+  {
+    _id: ObjectId("6470bd4c2c8f8acc1022d056"),
+    name: 'vandan Raval',
+    age: 21,
+    DOB: '04-08-2002',
+    education: 'persuing BE in computer Engineering'
+  }
+]
+First_demo>
